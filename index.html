@@ -110,7 +110,7 @@
   .services .section-title { color:var(--white); }
   .services .section-label { color:var(--accent); }
   .services-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin-top:48px; background:var(--border); }
-  .service-card { background:var(--navy); display:block; color:var(--white); padding:40px 32px; transition:background .3s; position:relative; overflow:hidden; cursor:default; }
+  .service-card { display:block; text-decoration:none; color:inherit; cursor:pointer; background:var(--navy); display:block; color:var(--white); padding:40px 32px; transition:background .3s; position:relative; overflow:hidden; cursor:default; }
   .service-card::after { content:''; position:absolute; bottom:0; left:0; width:0; height:3px; background:var(--accent); transition:width .4s; }
   .service-card:hover { background:var(--navy-light); }
   .service-card:hover::after { width:100%; }
@@ -190,6 +190,21 @@
     .nav-links{display:none}
     .form-row{grid-template-columns:1fr}
     .about-badge{bottom:-10px;right:-10px}
+  }
+
+  a.service-card { display:block; text-decoration:none; color:inherit; cursor:pointer; }
+  a.service-card:hover { border-color: var(--accent) !important; transform: translateY(-6px); }
+  a.service-card:hover .service-arrow { color: var(--accent); letter-spacing: 3px; }
+  .service-arrow {
+    display: block;
+    margin-top: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gray);
+    text-transform: uppercase;
+    transition: all 0.3s;
   }
 </style>
 </head>
@@ -322,13 +337,13 @@
       <h2 class="section-title">Uzman Olduğumuz <span style="color:var(--accent)">Teknik Alanlar</span></h2>
     </div>
     <div class="services-grid reveal">
-      <div class="service-card"><span class="service-num">01</span><span class="service-icon">🌡️</span><h3>Isıtma Sistemleri</h3><p>Kombi, kazan, radyatör ve merkezi ısıtma sistemlerinin kurulum, bakım ve onarım hizmetleri.</p></div>
-      <a href="sogutma.html" class="service-card" style="text-decoration:none"><span class="service-num">02</span><span class="service-icon">❄️</span><h3>Soğutma & Klima</h3><p>Split, VRF, chiller ve endüstriyel soğutma sistemlerinde komple çözümler.</p></div>
-      <a href="jenerator.html" class="service-card" style="text-decoration:none"><span class="service-num">03</span><span class="service-icon">⚡</span><h3>Jeneratör Servisi</h3><p>Dizel ve doğalgaz jeneratörlerinde bakım, onarım, yedek parça ve acil müdahale.</p></div>
-      <a href="elektrik.html" class="service-card" style="text-decoration:none"><span class="service-num">04</span><span class="service-icon">🔌</span><h3>Elektrik Tesisatı</h3><p>Güç dağıtım, pano montajı, kablo döşeme ve elektrik altyapı projeleri.</p></div>
-      <a href="bakim.html" class="service-card" style="text-decoration:none"><span class="service-num">05</span><span class="service-icon">🔧</span><h3>Periyodik Bakım</h3><p>Sözleşmeli bakım programları ile arıza oluşmadan önlem alın, maliyetlerinizi düşürün.</p></div>
-      <a href="havalandirma.html" class="service-card" style="text-decoration:none"><span class="service-num">06</span><span class="service-icon">💨</span><h3>Havalandırma</h3><p>Merkezi ve lokal havalandırma sistemlerinin kurulum, bakım ve onarımında komple çözümler.</p></div>
-      <a href="acil.html" class="service-card" style="text-decoration:none"><span class="service-num">07</span><span class="service-icon">🚨</span><h3>Acil Servis</h3><p>7/24 acil müdahale ekibi ile İstanbul genelinde en kısa sürede yanınızdayız.</p></div>
+      <a href="isitma.html" class="service-card"><span class="service-num">01</span><span class="service-icon">🌡️</span><h3>Isıtma Sistemleri</h3><p>Kombi, kazan, radyatör ve merkezi ısıtma sistemlerinin kurulum, bakım ve onarım hizmetleri.</p><span class="service-arrow">Detay →</span></a>
+      <a href="sogutma.html" class="service-card" style="text-decoration:none"><span class="service-num">02</span><span class="service-icon">❄️</span><h3>Soğutma & Klima</h3><p>Split, VRF, chiller ve endüstriyel soğutma sistemlerinde komple çözümler.</p><span class="service-arrow">Detay →</span></a>
+      <a href="jenerator.html" class="service-card" style="text-decoration:none"><span class="service-num">03</span><span class="service-icon">⚡</span><h3>Jeneratör Servisi</h3><p>Dizel ve doğalgaz jeneratörlerinde bakım, onarım, yedek parça ve acil müdahale.</p><span class="service-arrow">Detay →</span></a>
+      <a href="elektrik.html" class="service-card" style="text-decoration:none"><span class="service-num">04</span><span class="service-icon">🔌</span><h3>Elektrik Tesisatı</h3><p>Güç dağıtım, pano montajı, kablo döşeme ve elektrik altyapı projeleri.</p><span class="service-arrow">Detay →</span></a>
+      <a href="bakim.html" class="service-card" style="text-decoration:none"><span class="service-num">05</span><span class="service-icon">🔧</span><h3>Periyodik Bakım</h3><p>Sözleşmeli bakım programları ile arıza oluşmadan önlem alın, maliyetlerinizi düşürün.</p><span class="service-arrow">Detay →</span></a>
+      <a href="havalandirma.html" class="service-card" style="text-decoration:none"><span class="service-num">06</span><span class="service-icon">💨</span><h3>Havalandırma</h3><p>Merkezi ve lokal havalandırma sistemlerinin kurulum, bakım ve onarımında komple çözümler.</p><span class="service-arrow">Detay →</span></a>
+      <a href="acil.html" class="service-card" style="text-decoration:none"><span class="service-num">07</span><span class="service-icon">🚨</span><h3>Acil Servis</h3><p>7/24 acil müdahale ekibi ile İstanbul genelinde en kısa sürede yanınızdayız.</p><span class="service-arrow">Detay →</span></a>
     </div>
   </div>
 </section>
