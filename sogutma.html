@@ -493,7 +493,7 @@ function submitForm() {
   };
   console.log('Servis Formu:', data);
 
-  fetch('http://100.72.208.90:5678/webhook/servis-formu', {
+  fetch('http://100.72.208.90:5678/webhook-test/servis-formu', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
